@@ -6,5 +6,8 @@ export function fizzbuzz(iterationNumber: number): string {
   if (iterationNumber % 3 === 0) {
     return 'Fizz';
   }
+  if (iterationNumber % 5 === 0) {
+    return 'Buzz';
+  }
   return iterationNumber.toString();
 }
