@@ -3,11 +3,17 @@ export function fizzbuzz(iterationNumber: number): string {
     throw new Error('You must provide a number between 1 and 100');
   }
 
-  if (iterationNumber % 3 === 0) {
-    return 'Fizz';
+  const isMultipleOfThree = iterationNumber % 3 === 0;
+  const isMultipleOfFive = iterationNumber % 5 === 0;
+
+  let result = iterationNumber.toString();
+  if (isMultipleOfThree && isMultipleOfFive) {
+    result = 'FizzBuzz';
+  } else if (isMultipleOfThree) {
+    result = 'Fizz';
+  } else if (isMultipleOfFive) {
+    result = 'Buzz';
   }
-  if (iterationNumber % 5 === 0) {
-    return 'Buzz';
-  }
-  return iterationNumber.toString();
+  
+  return result;
 }
