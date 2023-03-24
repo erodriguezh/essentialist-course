@@ -9,6 +9,6 @@ describe('palindrome checker', () => {
     expect(palindromeChecker('wow')).toBeTruthy();
   });
   it("should detect that a word is not a palindrome", () => {
-    expect(palindromeChecker('bill')).toBeTruthy();
+    expect(palindromeChecker('bill')).toBeFalsy();
   });
 })
