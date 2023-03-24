@@ -1,21 +1,21 @@
-import { palindromeChecker } from "./index";
+import { isPalindrome } from "./index";
 
 
 describe('palindrome checker', () => {
   it("should be a function", () => {
-    expect(typeof palindromeChecker).toBe("function");
+    expect(typeof isPalindrome).toBe("function");
   });
   it("should detect that a word is a palindrome", () => {
-    expect(palindromeChecker('wow')).toBeTruthy();
+    expect(isPalindrome('wow')).toBeTruthy();
   });
   it("should detect that a word is not a palindrome", () => {
-    expect(palindromeChecker('bill')).toBeFalsy();
+    expect(isPalindrome('bill')).toBeFalsy();
   });
   it("should detect that a word with casing is a palindrome", () => {
-    expect(palindromeChecker('Mom')).toBeTruthy();
+    expect(isPalindrome('Mom')).toBeTruthy();
   });
   it("should detect that a sentence is a palindrome", () => {
-    expect(palindromeChecker('Was It A Rat I Saw')).toBeTruthy();
-    expect(palindromeChecker('Never Odd or Even')).toBeTruthy();
+    expect(isPalindrome('Was It A Rat I Saw')).toBeTruthy();
+    expect(isPalindrome('Never Odd or Even')).toBeTruthy();
   });
 })
