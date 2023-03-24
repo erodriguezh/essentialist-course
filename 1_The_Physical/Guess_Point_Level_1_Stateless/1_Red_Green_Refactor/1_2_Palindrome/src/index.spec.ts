@@ -11,4 +11,7 @@ describe('palindrome checker', () => {
   it("should detect that a word is not a palindrome", () => {
     expect(palindromeChecker('bill')).toBeFalsy();
   });
+  it("should detect that a word with casing is a palindrome", () => {
+    expect(palindromeChecker('Mom')).toBeTruthy();
+  });
 })
