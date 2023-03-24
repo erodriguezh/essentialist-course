@@ -13,4 +13,7 @@ describe("fizzbuzz", () => {
   it("should return number as string on accepted argument", () => {
     expect(typeof fizzbuzz(1)).toBe("string");
   });
+  it("should return Fizz on multiples of 3", () => {
+    expect(fizzbuzz(3)).toBe("Fizz");
+  });
 });
