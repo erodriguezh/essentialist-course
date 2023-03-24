@@ -10,4 +10,7 @@ describe("fizzbuzz", () => {
   it("should not take numbers over 100", () => {
     expect(() => fizzbuzz(101)).toThrow("You must provide a number between 1 and 100");
   });
+  it("should return number as string on accepted argument", () => {
+    expect(typeof fizzbuzz(1)).toBe("string");
+  });
 });
