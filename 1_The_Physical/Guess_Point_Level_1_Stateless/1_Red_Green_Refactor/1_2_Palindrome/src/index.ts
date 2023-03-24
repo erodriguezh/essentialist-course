@@ -1,4 +1,4 @@
 export function palindromeChecker(input: string) {
-  const lowCaseInput = input.toLowerCase();
-  return lowCaseInput === lowCaseInput.split('').reverse().join('');
+  const preparedInput = input.toLowerCase().replace(/\s/g,'');
+  return preparedInput === preparedInput.split('').reverse().join('');
 }
