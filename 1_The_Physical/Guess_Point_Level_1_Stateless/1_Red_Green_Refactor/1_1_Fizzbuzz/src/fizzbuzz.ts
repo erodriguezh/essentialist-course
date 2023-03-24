@@ -3,5 +3,8 @@ export function fizzbuzz(iterationNumber: number): string {
     throw new Error('You must provide a number between 1 and 100');
   }
 
+  if (iterationNumber % 3 === 0) {
+    return 'Fizz';
+  }
   return iterationNumber.toString();
 }
