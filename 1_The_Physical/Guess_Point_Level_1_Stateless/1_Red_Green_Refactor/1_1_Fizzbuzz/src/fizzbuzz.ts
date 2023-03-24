@@ -1,12 +1,12 @@
-export function fizzbuzz(iterationNumber: number): string {
-  if (typeof iterationNumber !== 'number' || iterationNumber < 1 || iterationNumber > 100) {
+export function fizzbuzz(num: number): string {
+  if (typeof num !== 'number' || num < 1 || num > 100) {
     throw new Error('You must provide a number between 1 and 100');
   }
 
-  const isMultipleOfThree = iterationNumber % 3 === 0;
-  const isMultipleOfFive = iterationNumber % 5 === 0;
+  const isMultipleOfThree = num % 3 === 0;
+  const isMultipleOfFive = num % 5 === 0;
 
-  let result = iterationNumber.toString();
+  let result = num.toString();
   if (isMultipleOfThree && isMultipleOfFive) {
     result = 'FizzBuzz';
   } else if (isMultipleOfThree) {
@@ -14,6 +14,6 @@ export function fizzbuzz(iterationNumber: number): string {
   } else if (isMultipleOfFive) {
     result = 'Buzz';
   }
-  
+
   return result;
 }
